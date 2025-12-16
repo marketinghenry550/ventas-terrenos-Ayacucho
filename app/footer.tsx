@@ -15,14 +15,17 @@ const Footer = () => {
     {
       title: "Soporte al cliente",
       links: [
-        { name: "(+51) 945 513 323", href: "tel:+51945513323" },
+        { name: "(+51) 945 513 323", href: "https://api.whatsapp.com/send?phone=51916194372&text=Hola!%20Estoy%20interesado%20en%20el%20pryecto." },
         {
           name: "comercial@casagrandegeotecnia.com.pe",
-          href: "https://mail.google.com/mail/?view=cm&to=comercial@casagrandegeotecnia.com.pe",
+          href: "https://mail.google.com/mail/?view=cm&to=u19217724@gmail.com",
+        },
+        {
+          name: "Jirón Quinua 565, Ayacucho 05003", href: "https://maps.app.goo.gl/VQrFK4dVjmDKWY5M7",
         },
         {
           name: "Redes sociales",
-          href: "https://wa.me/51927545815?text=Hola%20quiero%hacerme%20vip",
+          href: "https://www.facebook.com/profile.php?id=61584966996472",
         },
       ],
     },
@@ -31,9 +34,9 @@ const Footer = () => {
   // Data for "Nuestros productos" section links
   const productLinks = [
     { name: "Nosotros", href: "#" },
-    { name: "Marca", href: "#" },
-    { name: "Blog", href: "/blog" },
-    { name: "Libros", href: "#" },
+    { name: "Proyectos", href: "#" },
+    { name: "Lotes", href: "/blog" },
+    { name: "Vende tu terreno ", href: "#" },
   ];
 
   // Data for social media links
@@ -120,7 +123,7 @@ const Footer = () => {
               >
                 <Image
                   src="/logofooter.svg"
-                  alt="logo de casagrande geotecnia"
+                  alt="logo de venta de terrenos en ayacucho"
                   fill
                   sizes="100vw"
                   className="object-contain px-2 transition-transform group-hover:scale-105"

@@ -44,7 +44,7 @@ interface ContactInfoItemProps {
 const navLinks: NavLink[] = [
   { href: "/inmuebles#proyectos", label: "Proyectos" },
   { href: "/inmuebles#propiedades", label: "Propiedades" },
-  { href: "/inmuebles#alquileres", label: "Alquileres" },
+  // { href: "/inmuebles#alquileres", label: "Alquileres" },
   { href: "/a", label: "Vende tu terreno" },
   { href: "/nosotros", label: "Nosotros" },
 ];
@@ -78,10 +78,8 @@ const socialLinks: SocialLink[] = [
 ];
 
 const contactInfo: ContactInfoItemProps[] = [
-  { text: "Blog", href: "/blog" },
-  { text: "Refiere y Gana", href: "https://wa.me/51945513323" },
   { text: "Ubicacion", href: "#" },
-  { text: "Invierte aqui", href: "#invierte" },
+  { text: "Llámanos: +51 945 513 323", href: "tel:+51916194372" },
 ];
 
 const ciudadesProyectos = [
@@ -573,7 +571,7 @@ const Navbar = () => {
                         alt="Logo de Casagrande Geotecnia"
                         width={100}
                         height={48}
-                        className="h-11 w-auto md:h-12 max-md:px-2"
+                        className="h-11 w-auto md:h-17 max-md:px-2"
                     />
                     </motion.div>
                 </Link>
@@ -647,7 +645,7 @@ const Navbar = () => {
               </nav>
               <div className="space-y-4 border-t p-4 pb-20 text-sm">
                 <motion.div variants={mobileMenuItemVariants} className="w-full space-y-2 text-4xl">
-                  <a href="https://wa.me/51945513323" target="_blank">
+                  <a href="https://wa.me/51916194372" target="_blank">
                     <Button className="w-full bg-[#01338C] text-white font-semibold rounded-lg hover:bg-[#373737]">
                       ¡COTIZAR AHORA!
                     </Button>

@@ -6,7 +6,6 @@ import Formulario from "./formulario";
 import Gana from "./gana";
 import HeroCarousel from "./hero";
 import Navbar from "./navbar";
-import Proceso from "./proceso";
 import Proyectos from "./proyectos";
 
 export default function Home() {
@@ -14,7 +13,7 @@ export default function Home() {
     <div>
       <Navbar />
       <HeroCarousel />
-      <Proceso />
+      {/* <Proceso /> */}
       <Proyectos />
       <Casas />
       <Comentario />
