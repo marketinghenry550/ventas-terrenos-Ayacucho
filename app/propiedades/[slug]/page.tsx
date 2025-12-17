@@ -159,8 +159,7 @@ export default async function ProyectoPage({
           <div className="relative bg-[#FFB200]">
             {/* textura suave (NO afecta al precio) */}
             <div className="pointer-events-none absolute inset-0 opacity-[0.10]">
-              <div className="absolute -left-40 -top-40 h-[520px] w-[520px] rounded-full bg-white blur-3xl" />
-              <div className="absolute -right-40 -bottom-56 h-[520px] w-[520px] rounded-full bg-black blur-3xl" />
+             
             </div>
 
             <div className="relative  mx-auto max-w-7xl px-4 py-10">
@@ -301,7 +300,7 @@ export default async function ProyectoPage({
                         {proyecto.caracteristicas.map((it, i) => (
                           <div
                             key={`${it.label}-${i}`}
-                            className="flex items-center justify-between gap-6 px-6 py-5 transition-colors hover:bg-slate-50/70 md:border-b md:border-slate-200 md:odd:border-r md:[&:nth-child(odd)]:border-slate-200"
+                            className="flex items-center justify-between gap-6 px-6 py-5 transition-colors hover:bg-slate-50/70 md:border-b md:border-slate-200 md:odd:border-r md:odd:border-slate-200"
                           >
                             <span className="text-sm font-bold text-slate-600">
                               {it.label}

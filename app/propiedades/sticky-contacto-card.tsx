@@ -80,7 +80,7 @@ Email: ${email}`;
           >
             1
           </button>
-          <div className="h-[2px] w-16 bg-white/25" />
+          <div className="h-0.5 w-16 bg-white/25" />
           <button
             onClick={() => setStep(2)}
             className={[
