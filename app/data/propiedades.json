@@ -1,152 +1,56 @@
 [
-  {
-    "slug": "casa-centro-ayacucho",
-    "tipo": "propiedad",
-    "titulo": "Casa en el Centro",
-    "subtitulo": "Ayacucho",
-    "categoria": "Casa",
-    "ubicacion": "Jr. Quinua 570, Ayacucho",
-    "departamento": "Ayacucho",
-    "provincia": "Huamanga",
-    "distrito": "Ayacucho",
+ {
+  "slug": "casa-centro-ayacucho",
+  "tipo": "proyecto",
+  "titulo": "Alameda Lima Sur",
+  "subtitulo": "Chilca",
+  "categoria": "Lotes",
+  "ubicacion": "KM. 61.5 Panamericana Sur, Chilca",
 
-    "precioDesdeSol": "S/ 420,000",
-    "precioDesdeDolar": "$ 110,000",
-    "pagoContado": "S/ 405,000",
+  "precioDesdeSol": "S/ 20000",
+  "precioDesdeDolar": "$ 85",
+  "pagoContado": "S/ 1000",
 
-    "imagen": "/proyecto.webp",
-    "etiquetas": ["Listo para habitar", "Oportunidad"],
+  "imagen": "/banner.webp",
+  "etiquetas": ["Pre-venta", "Alta plusvalía", "Servicios completos"],
 
-    "resumen": "Casa amplia en pleno centro de Ayacucho, ideal para familia o negocio.",
-    "descripcion": "Ubicada en una zona estratégica, cerca a comercios, colegios y servicios. Ideal para vivienda o inversión por su alta demanda en el centro de la ciudad.",
+  "descripcion": "Texto largo…",
 
-    "caracteristicas": [
-      { "label": "Área", "value": "150 m²" },
-      { "label": "Dormitorios", "value": "4" },
-      { "label": "Baños", "value": "3" },
-      { "label": "Cocheras", "value": "1" },
-      { "label": "Operación", "value": "Comprar" },
-      { "label": "Tipo", "value": "Casa" }
-    ],
+  "equipamiento": [
+    "Titulo de Propiedad",
+    "Servicios completos",
+    "Parques",
+    "Juegos para niños",
+    "Ciclovía"
+  ],
 
-    "beneficios": [
-      "Asesoría legal y acompañamiento durante todo el proceso.",
-      "Visita guiada y ubicación referenciada.",
-      "Actualización de precios y disponibilidad en tiempo real.",
-      "Soporte para negociación y cierre seguro."
-    ],
+  "promociones": [
+    { "titulo": "Bono por pronto pago", "detalle": "Ahorra en pago al contado..." }
+  ],
 
-    "promociones": [
-      {
-        "titulo": "Bono por pronto pago",
-        "detalle": "Descuento especial en pago al contado (según disponibilidad)."
-      },
-      {
-        "titulo": "Separación inmediata",
-        "detalle": "Reserva con un monto mínimo y asegura la propiedad."
-      }
-    ],
+  "caracteristicas": [
+    { "label": "Área desde", "value": "120 m²" }
+  ],
 
-    "galeria": {
-      "fotos": ["/proyecto1.webp", "/proyecto2.webp", "/proyecto3.webp", "/proyecto4.webp"],
-      "youtubeId": "dQw4w9WgXcQ"
-    },
-
-    "ubicacionImagen": "/ubicacion.webp",
-
-    "contacto": {
-      "whatsapp": "51970993246",
-      "telefono": "+51 970 993 246",
-      "direccion": "Jr. Quinua N° 570, Ayacucho",
-      "horario": "Lun–Sáb 9:00 AM – 7:00 PM"
-    },
-
-    "monedaPrincipal": "PEN",
-    "tipoOperacion": "comprar",
-    "tipoInmueble": "casa",
-    "areaM2": 150,
-    "dormitorios": 4,
-    "banos": 3,
-    "cocheras": 1
+  "galeria": {
+    "fotos": ["/chilca-1.webp", "/chilca-2.webp", "/chilca-3.webp"],
+    "youtubeId": "M1zp8yv-tuI"
   },
 
-  {
-    "slug": "alameda-lima-sur-chilca",
-    "tipo": "proyecto",
-    "titulo": "Alameda Lima Sur",
-    "subtitulo": "Chilca",
-    "categoria": "Lotes",
-    "ubicacion": "KM. 61.5 Panamericana Sur, Chilca",
-    "departamento": "Lima",
-    "provincia": "Cañete",
-    "distrito": "Chilca",
+  "ubicacionImagen": "/chilca-mapa.webp",
+  "mapsUrl": "https://www.google.com/maps?q=KM+61.5+Panamericana+Sur+Chilca",
 
-    "precioDesdeSol": "S/ 311",
-    "precioDesdeDolar": "$ 85",
-    "pagoContado": "S/ 74,790",
+  "descuento": {
+    "titulo": "Campaña de preventa: precio especial por tiempo limitado",
+    "imagen": "/descuento.webp"
+  },
 
-    "imagen": "/chilca-hero.webp",
-    "etiquetas": ["Pre-venta", "Alta plusvalía", "Servicios completos"],
-
-    "resumen": "Urbanización que ofrece lotes en Chilca, ideal para invertir en una zona tranquila y con alto potencial de crecimiento.",
-    "descripcion": "Proyecto con servicios básicos completos, infraestructura moderna y áreas verdes. Ubicado estratégicamente cerca a vías principales, con alta proyección de revalorización por el crecimiento sostenido de la zona.",
-
-    "caracteristicas": [
-      { "label": "Área desde", "value": "120 m²" },
-      { "label": "Lotes disponibles", "value": "24" },
-      { "label": "Entrega", "value": "Inmediata" },
-      { "label": "Financiamiento", "value": "80%" },
-      { "label": "Servicios", "value": "Luz, agua y desagüe" },
-      { "label": "Acceso", "value": "Panamericana Sur" }
-    ],
-
-    "beneficios": [
-      "Separación con monto accesible.",
-      "Financiamiento directo sin bancos (según evaluación).",
-      "Asesoría legal y acompañamiento comunitario.",
-      "Visita guiada y ubicación referenciada.",
-      "Alta proyección de valorización."
-    ],
-
-    "promociones": [
-      {
-        "titulo": "Bono por pronto pago",
-        "detalle": "Ahorra en pago al contado por campaña vigente."
-      },
-      {
-        "titulo": "Cuotas desde",
-        "detalle": "Planes de cuota mensual según metraje y evaluación."
-      },
-      {
-        "titulo": "Promoción de separación",
-        "detalle": "Separa hoy y congela el precio de preventa."
-      }
-    ],
-
-    "galeria": {
-      "fotos": ["/chilca-1.webp", "/chilca-2.webp", "/chilca-3.webp", "/chilca-4.webp", "/chilca-5.webp"],
-      "youtubeId": "dQw4w9WgXcQ"
-    },
-
-    "ubicacionImagen": "/chilca-mapa.webp",
-
-    "descuento": {
-      "titulo": "Campaña de preventa: precio especial por tiempo limitado",
-      "imagen": "/descuento.webp"
-    },
-
-    "contacto": {
-      "whatsapp": "51970993246",
-      "telefono": "+51 970 993 246",
-      "direccion": "Jr. Quinua N° 570, Ayacucho",
-      "horario": "Lun–Dom 9:00 AM – 6:00 PM"
-    },
-
-    "detalles": {
-      "area": "120 m²",
-      "lotesDisponibles": 24,
-      "entrega": "Inmediata",
-      "financiamiento": "80%"
-    }
+  "contacto": {
+    "whatsapp": "51970993246",
+    "telefono": "+51 970 993 246",
+    "direccion": "Jr. Quinua N° 570, Ayacucho",
+    "horario": "Lun–Dom 9:00 AM – 6:00 PM"
   }
+}
+
 ]

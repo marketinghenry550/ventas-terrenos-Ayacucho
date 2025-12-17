@@ -1,10 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { useMemo, useState } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
-import { Card } from "@/components/ui/card";
 
 export default function GaleriaTabs({
   fotos,
@@ -12,73 +11,84 @@ export default function GaleriaTabs({
   titulo,
 }: {
   fotos: string[];
-  youtubeId: string;
+  youtubeId?: string;
   titulo: string;
 }) {
+  const safeFotos = useMemo(() => (Array.isArray(fotos) ? fotos : []), [fotos]);
   const [active, setActive] = useState(0);
 
+  const prev = () => setActive((v) => (v - 1 + safeFotos.length) % safeFotos.length);
+  const next = () => setActive((v) => (v + 1) % safeFotos.length);
+
   return (
-    <Card className="rounded-3xl border-slate-200 p-5 shadow-sm">
+    <div className="overflow-hidden rounded-3xl bg-[#F3F7FB] p-6">
       <Tabs defaultValue="fotos">
-        <TabsList className="grid w-full grid-cols-2">
-          <TabsTrigger value="fotos">Fotos</TabsTrigger>
-          <TabsTrigger value="video">Video</TabsTrigger>
-        </TabsList>
-
-        <TabsContent value="fotos" className="mt-5">
-          <div className="grid gap-4 lg:grid-cols-[1.6fr_0.9fr]">
-            <div className="relative h-[320px] w-full overflow-hidden rounded-2xl border border-slate-200 md:h-[420px]">
-              <AnimatePresence mode="wait">
-                <motion.div
-                  key={fotos[active] ?? fotos[0]}
-                  initial={{ opacity: 0, scale: 1.01 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.995 }}
-                  transition={{ duration: 0.25, ease: "easeOut" }}
-                  className="absolute inset-0"
-                >
-                  <Image
-                    src={fotos[active] ?? fotos[0]}
-                    alt={`Foto ${active + 1} - ${titulo}`}
-                    fill
-                    className="object-cover"
-                  />
-                </motion.div>
-              </AnimatePresence>
-            </div>
-
-            <div className="grid grid-cols-3 gap-3 lg:grid-cols-2">
-              {fotos.slice(0, 6).map((src, i) => (
-                <button
-                  key={`${src}-${i}`}
-                  onClick={() => setActive(i)}
-                  className={[
-                    "relative h-24 overflow-hidden rounded-xl border md:h-28",
-                    i === active ? "border-slate-900" : "border-slate-200",
-                    "hover:opacity-90",
-                  ].join(" ")}
-                >
-                  <Image src={src} alt={`Miniatura ${i + 1}`} fill className="object-cover" />
-                </button>
-              ))}
-            </div>
-          </div>
-        </TabsContent>
-
-        <TabsContent value="video" className="mt-5">
-          <div className="overflow-hidden rounded-2xl border border-slate-200">
-            <div className="relative aspect-video w-full">
-              <iframe
-                className="absolute inset-0 h-full w-full"
-                src={`https://www.youtube.com/embed/${youtubeId}`}
-                title={`Video - ${titulo}`}
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
+        <TabsContent value="fotos" className="mt-0">
+          <div className="relative overflow-hidden rounded-2xl">
+            <div className="relative aspect-[16/8] w-full">
+              <Image
+                src={safeFotos[active]}
+                alt={`Foto ${active + 1} - ${titulo}`}
+                fill
+                className="object-cover"
+                sizes="100vw"
               />
             </div>
+
+            {/* Flechas circulares blancas */}
+            {safeFotos.length > 1 && (
+              <>
+                <button
+                  onClick={prev}
+                  aria-label="Anterior"
+                  className="absolute left-4 top-1/2 -translate-y-1/2 grid h-12 w-12 place-items-center rounded-full bg-white shadow-md hover:opacity-90"
+                >
+                  <ChevronLeft className="h-6 w-6 text-[#0B6FB6]" />
+                </button>
+                <button
+                  onClick={next}
+                  aria-label="Siguiente"
+                  className="absolute right-4 top-1/2 -translate-y-1/2 grid h-12 w-12 place-items-center rounded-full bg-white shadow-md hover:opacity-90"
+                >
+                  <ChevronRight className="h-6 w-6 text-[#0B6FB6]" />
+                </button>
+              </>
+            )}
           </div>
         </TabsContent>
+
+        <TabsContent value="video" className="mt-0">
+          <div className="overflow-hidden rounded-2xl bg-white">
+            <div className="relative aspect-video w-full">
+              {youtubeId ? (
+                <iframe
+                  className="absolute inset-0 h-full w-full"
+                  src={`https://www.youtube.com/embed/${youtubeId}`}
+                  title={`Video - ${titulo}`}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+              ) : (
+                <div className="grid h-full w-full place-items-center text-sm text-slate-600">
+                  Este proyecto no tiene video aún.
+                </div>
+              )}
+            </div>
+          </div>
+        </TabsContent>
+
+        {/* Tabs abajo centrados */}
+        <div className="mt-6 flex justify-center">
+          <TabsList className="rounded-full bg-white p-1 shadow-sm">
+            <TabsTrigger value="video" className="rounded-full px-6">
+              Videos
+            </TabsTrigger>
+            <TabsTrigger value="fotos" className="rounded-full px-6">
+              Fotos
+            </TabsTrigger>
+          </TabsList>
+        </div>
       </Tabs>
-    </Card>
+    </div>
   );
 }
