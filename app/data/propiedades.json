@@ -1,56 +1,62 @@
 [
- {
-  "slug": "casa-centro-ayacucho",
-  "tipo": "proyecto",
-  "titulo": "Alameda Lima Sur",
-  "subtitulo": "Chilca",
-  "categoria": "Lotes",
-  "ubicacion": "KM. 61.5 Panamericana Sur, Chilca",
+  {
+    "slug": "villa-sol-2-qorihuillca",
+    "tipo": "proyecto",
+    "titulo": "Villa Sol 2",
+    "subtitulo": "Qorihuillca",
+    "categoria": "Lotes",
+    "ubicacion": "Qorihuillca, Huamanga – Ayacucho",
 
-  "precioDesdeSol": "S/ 20000",
-  "precioDesdeDolar": "$ 85",
-  "pagoContado": "S/ 1000",
+    "precioDesdeSol": "S/ 16000",
+    "precioDesdeDolar": "",
+    "pagoContado": " S/ 2,000",
 
-  "imagen": "/banner.webp",
-  "etiquetas": ["Pre-venta", "Alta plusvalía", "Servicios completos"],
+    "imagen": "/banner.webp",
+    "etiquetas": ["Ayacucho", "Alta plusvalía", "Acceso vehicular", "Servicios en expansión"],
 
-  "descripcion": "Texto largo…",
+    "descripcion": "Villa Sol 2 es un proyecto de lotes en Qorihuillca – Ayacucho, ideal para vivienda, casa de campo o inversión. Zona con crecimiento sostenido, accesos en mejora y alta proyección de valorización. Compra segura con respaldo y acompañamiento en el proceso.",
 
-  "equipamiento": [
-    "Titulo de Propiedad",
-    "Servicios completos",
-    "Parques",
-    "Juegos para niños",
-    "Ciclovía"
-  ],
+    "equipamiento": [
+      "Titulo de Propiedad",
+      "Servicios completos",
+      "Agua",
+      "Luz",
+      "Accesos"
+    ],
 
-  "promociones": [
-    { "titulo": "Bono por pronto pago", "detalle": "Ahorra en pago al contado..." }
-  ],
+  
 
-  "caracteristicas": [
-    { "label": "Área desde", "value": "120 m²" }
-  ],
+    "caracteristicas": [
+      { "label": "Área", "value": "200 m²" },
+      { "label": "Tipo", "value": "Vivienda / casa de campo / inversión" },
+      { "label": "Documentación", "value": "Acta de transferencia + contrato privado (legalizable)" },
+      { "label": "Valorización", "value": "Zona con proyección y crecimiento" }
+    ],
 
-  "galeria": {
-    "fotos": ["/chilca-1.webp", "/chilca-2.webp", "/chilca-3.webp"],
-    "youtubeId": "M1zp8yv-tuI"
-  },
+    "galeria": {
+      "fotos": [
+        "/banner.webp",
+        "/prueba01.png",
+        "/banner.webp",
+        "/prueba01.png",
+        "/prueba01.webp"
+      ],
+      "youtubeId": "uWzgyrh_UTI"
+    },
 
-  "ubicacionImagen": "/chilca-mapa.webp",
-  "mapsUrl": "https://www.google.com/maps?q=KM+61.5+Panamericana+Sur+Chilca",
+    "ubicacionImagen": "/prueba01.png",
+    "mapsUrl": "https://www.google.com/maps?q=Qorihuillca+Huamanga+Ayacucho",
 
-  "descuento": {
-    "titulo": "Campaña de preventa: precio especial por tiempo limitado",
-    "imagen": "/descuento.webp"
-  },
+    "descuento": {
+      "titulo": "Campaña activa: separa tu lote hoy y asegura precio preferencial",
+      "imagen": "/prueba01.webp"
+    },
 
-  "contacto": {
-    "whatsapp": "51970993246",
-    "telefono": "+51 970 993 246",
-    "direccion": "Jr. Quinua N° 570, Ayacucho",
-    "horario": "Lun–Dom 9:00 AM – 6:00 PM"
+    "contacto": {
+      "whatsapp": "51970993246",
+      "telefono": "+51 970 993 246",
+      "direccion": "Jr. Quinua N° 570, Ayacucho",
+      "horario": "Lun–Dom 9:00 AM – 6:00 PM"
+    }
   }
-}
-
 ]

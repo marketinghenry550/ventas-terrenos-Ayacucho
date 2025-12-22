@@ -162,10 +162,11 @@ export default async function ProyectoPage({
              
             </div>
 
-            <div className="relative  mx-auto max-w-7xl px-4 py-10">
-              <div className="flex items-start gap-10 justify-between">
-                {/* IZQUIERDA */}
-                <div className="min-w-0">
+            <div className="relative   mx-auto max-w-[1400px] px-4 py-10">
+              <div className="">
+                <div className="flex items-start gap-10 justify-between">
+
+                <div className="">
                   <p className="text-sm font-extrabold text-slate-900/80">
                     {proyecto.subtitulo}
                   </p>
@@ -193,9 +194,8 @@ export default async function ProyectoPage({
                
                 </div>
 
-                {/* PRECIO – HORIZONTAL GRANDE (CONTADO / CRÉDITO) */}
-                <div className="">
-                  <div className="flex w-full max-w-[520px] gap-3 rounded-3xl bg-[#0B6FB6] px-6 py-5 text-white shadow-[0_26px_70px_rgba(2,6,23,0.35)] ring-1 ring-white/10">
+                <div className=" flex w-full max-w-[520px]">
+                  <div className="flex w-full  max-w-[520px] gap-3 rounded-3xl bg-[#0B6FB6] px-6 py-5 text-white shadow-[0_26px_70px_rgba(2,6,23,0.35)] ring-1 ring-white/10">
                     {/* CONTADO */}
                     <div className="flex flex-1 flex-col justify-center rounded-2xl bg-white/15 px-5 py-4 ring-1 ring-white/10">
                       <p className="text-xs font-extrabold uppercase text-white/80">
@@ -219,13 +219,17 @@ export default async function ProyectoPage({
                           Crédito
                         </p>
 
-                        <p className="mt-1 text-2xl font-black leading-none">
+                        <p className="mt-1 text-4xl font-black leading-none">
                           {proyecto.pagoContado}
                         </p>
                       </div>
                     ) : null}
                   </div>
                 </div>
+
+                </div>
+                {/* IZQUIERDA */}
+                        {/* PRECIO – HORIZONTAL GRANDE (CONTADO / CRÉDITO) */}
 
                 {/* reserva del form */}
                 <div className="hidden lg:block" />
@@ -237,7 +241,7 @@ export default async function ProyectoPage({
         {/* =========================
             CONTENIDO + FORM (sticky bien)
         ========================= */}
-        <section className="mx-auto max-w-7xl px-4 pb-10">
+        <section className="mx-auto max-w-[1400px] px-4 pb-10">
           <div className="grid gap-10 lg:grid-cols-[1fr_420px] lg:items-start">
             {/* IZQUIERDA */}
             <div className="pt-10 lg:pt-12">
@@ -299,8 +303,8 @@ export default async function ProyectoPage({
                       <div className="divide-y divide-slate-200 md:grid md:grid-cols-2 md:divide-y-0">
                         {proyecto.caracteristicas.map((it, i) => (
                           <div
-                            key={`${it.label}-${i}`}
-                            className="flex items-center justify-between gap-6 px-6 py-5 transition-colors hover:bg-slate-50/70 md:border-b md:border-slate-200 md:odd:border-r md:odd:border-slate-200"
+                          key={`${it.label}-${i}`}
+                          className="flex items-center justify-between gap-6 px-6 py-5 transition-colors hover:bg-slate-50/70 md:border-b md:border-slate-200 md:odd:border-r md:odd:border-slate-200"
                           >
                             <span className="text-sm font-bold text-slate-600">
                               {it.label}
@@ -316,6 +320,20 @@ export default async function ProyectoPage({
                 </SectionAnimation>
               ) : null}
 
+                          <SectionAnimation>
+                            <div className="pt-10">
+                              <h2 className="text-3xl font-extrabold text-[#0B6FB6]">
+                                Galería de Fotos y Videos
+                              </h2>
+                              <div className="mt-6">
+                                <GaleriaTabs
+                                  fotos={fotos}
+                                  youtubeId={youtubeId}
+                                  titulo={proyecto.titulo}
+                                />
+                              </div>
+                            </div>
+                          </SectionAnimation>
               {proyecto.descuento?.imagen ? (
                 <SectionAnimation>
                   <div className="pt-10">
@@ -327,20 +345,6 @@ export default async function ProyectoPage({
                 </SectionAnimation>
               ) : null}
 
-              <SectionAnimation>
-                <div className="pt-10">
-                  <h2 className="text-3xl font-extrabold text-[#0B6FB6]">
-                    Galería de Fotos y Videos
-                  </h2>
-                  <div className="mt-6">
-                    <GaleriaTabs
-                      fotos={fotos}
-                      youtubeId={youtubeId}
-                      titulo={proyecto.titulo}
-                    />
-                  </div>
-                </div>
-              </SectionAnimation>
 
               <SectionAnimation>
                 <div className="pt-10">

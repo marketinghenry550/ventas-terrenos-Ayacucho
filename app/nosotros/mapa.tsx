@@ -10,7 +10,7 @@ import { FaTimes } from 'react-icons/fa'; // Icono para cerrar
 const leyenda = [
   { color: '#10B981', label: 'Casas en Venta' }, 
   { color: '#F59E0B', label: 'Terrenos' }, 
-  { color: '#3B82F6', label: 'Alquileres' }, 
+  // { color: '#3B82F6', label: 'Alquileres' }, 
   { color: '#8B5CF6', label: 'Oficinas' },
 ];
 
