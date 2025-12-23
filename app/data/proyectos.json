@@ -63,7 +63,7 @@
     },
 
     "ubicacionImagen": "/villasolmap.webp",
-    "mapsUrl": "https://earth.google.com/earth/d/1RbNr9dRhePh8klQifR6gw4m8EIVUQG8Q?usp=sharing",
+    "mapsUrl": "https://earth.google.com/web/@-13.13418924,-74.25607544,3016.56377515a,206.96390993d,35y,83.83308131h,0t,0r/data=CgRCAggBMikKJwolCiExUmJOcjlkUmhlUGg4a2xRaWZSNmd3NG04RUlWVVFHOFEgAToDCgEwQgIIAEoICJbF8NIHEAE",
 
     "descuento": {
       "titulo": "Campaña activa: separa tu lote hoy y asegura tu precio preferencial",
@@ -76,5 +76,142 @@
       "direccion": "Jr. Quinua N° 570, Ayacucho",
       "horario": "Lun–Dom 9:00 AM – 6:00 PM"
     }
+  },
+    {
+  "slug": "pampaqocha-qorihuillca-170m2",
+  "tipo": "proyecto",
+  "titulo": "Pampaqocha",
+  "subtitulo": "Qorihuillca",
+  "categoria": "Lotes",
+  "ubicacion": "Qorihuillca – Pampaqocha, Huamanga – Ayacucho",
+
+  "precioDesdeSol": "S/ 45,000",
+  "precioDesdeDolar": "",
+  "pagoContado": "S/ 5,000",
+
+  "imagen": "/Pampaqocha01.webp",
+  "etiquetas": [
+    "Ayacucho",
+    "Pampaqocha",
+    "Acceso vehicular",
+    "Bioambiental",
+    "Agua",
+    "Luz",
+    "Naturaleza"
+  ],
+
+  "descripcion": "Pampaqocha es un proyecto de lotes ubicado en Qorihuillca – Pampaqocha (Huamanga, Ayacucho), rodeado de naturaleza y un entorno bioambiental ideal para desconectar y vivir con tranquilidad. Cuenta con agua, luz y acceso vehicular, perfecto para primera vivienda, casa de campo o inversión. Zona con proyección de crecimiento y valorización sostenida, con compra segura y acompañamiento durante todo el proceso.",
+
+  "equipamiento": [
+    "Agua",
+    "Luz",
+    "Acceso vehicular",
+    "Entorno bioambiental"
+  ],
+
+  "caracteristicas": [
+    { "label": "Área", "value": "170 m²" },
+    { "label": "Uso", "value": "Vivienda / Casa de campo / Inversión" },
+    { "label": "Servicios", "value": "Agua + Luz" },
+    { "label": "Acceso", "value": "Acceso vehicular" },
+    { "label": "Entorno", "value": "Bioambiental (naturaleza y aire puro)" },
+    { "label": "Valorización", "value": "Zona con proyección y crecimiento" }
+  ],
+
+  "galeria": {
+    "fotos": [
+      "/pampaqocha01.webp",
+      "/pampaqocha02.webp",
+      "/pampaqocha03.webp",
+      "/pampaqocha04.webp"
+    ],
+    "youtubeId": ""
+  },
+
+  "ubicacionImagen": "/Pampaqochamap.webp",
+  "mapsUrl": "https://earth.google.com/web/data=MkEKPwo9CiExUmJOcjlkUmhlUGg4a2xRaWZSNmd3NG04RUlWVVFHOFESFgoUMDFDNzBCQ0NGMDNDODI3RTE3RjAgAUICCABKCAiWxfDSBxAB",
+
+  "descuento": {
+    "titulo": "Campaña activa: separa tu lote hoy y asegura precio preferencial",
+    "imagen": "/pampaqocha-promo.webp"
+  },
+
+  "contacto": {
+    "whatsapp": "51970993246",
+    "telefono": "+51 970 993 246",
+    "direccion": "Jr. Quinua N° 570, Ayacucho",
+    "horario": "Lun–Dom 9:00 AM – 6:00 PM"
   }
+},
+{
+  "slug": "pampaqocha-qorihuillca-300m2",
+  "tipo": "proyecto",
+  "titulo": "Pampaqocha",
+  "subtitulo": "Qorihuillca",
+  "categoria": "Lotes",
+  "ubicacion": "Qorihuillca – Pampaqocha, Huamanga – Ayacucho",
+
+  "precioDesdeSol": "S/ 68,000",
+  "precioDesdeDolar": "",
+  "pagoContado": "S/ 8,000",
+
+  "imagen": "/Pampaqochasegundo03.webp",
+  "etiquetas": [
+    "Ayacucho",
+    "Qorihuillca",
+    "Pampaqocha",
+    "Acceso vehicular",
+    "Bioambiental",
+    "Agua",
+    "Luz",
+    "Naturaleza",
+    "Alta plusvalía"
+  ],
+
+  "descripcion": "Pampaqocha es un proyecto de lotes ubicado en la zona de Qorihuillca – Pampaqocha (Huamanga, Ayacucho). Se caracteriza por su entorno natural, aire puro y ambiente bioambiental, ideal para quienes buscan tranquilidad y calidad de vida. Los lotes cuentan con agua, luz y acceso vehicular, siendo una excelente opción para vivienda, casa de campo o inversión. Zona con crecimiento progresivo y alta proyección de valorización, respaldada por un proceso de compra seguro y acompañamiento permanente.",
+
+  "equipamiento": [
+    "Agua",
+    "Luz",
+    "Acceso vehicular",
+    "Entorno bioambiental",
+    "Zona natural"
+  ],
+
+  "caracteristicas": [
+    { "label": "Área", "value": "300 m²" },
+    { "label": "Uso", "value": "Vivienda / Casa de campo / Inversión" },
+    { "label": "Servicios", "value": "Agua y luz" },
+    { "label": "Accesos", "value": "Acceso vehicular" },
+    { "label": "Entorno", "value": "Bioambiental, naturaleza y aire puro" },
+    { "label": "Valorización", "value": "Zona con crecimiento y alta proyección" }
+  ],
+
+  "galeria": {
+    "fotos": [
+      "/Pampaqochasegundo01.webp",
+      "/Pampaqochasegundo02.webp",
+      "/Pampaqochasegundo04.webp"
+    ],
+    "youtubeId": ""
+  },
+
+  "ubicacionImagen": "/Pampaqochasegundomap.webp",
+  "mapsUrl": "https://earth.google.com/web/@-13.14409169,-74.24568411,3003.7966427a,155.23739527d,30y,49.63916092h,0t,0r/data=CgRCAggBMikKJwolCiExUmJOcjlkUmhlUGg4a2xRaWZSNmd3NG04RUlWVVFHOFEgAToDCgEwQgIIAEoICPGUwqQDEAE",
+
+  "descuento": {
+    "titulo": "Campaña activa: separa tu lote hoy y asegura precio preferencial",
+    "imagen": "/pampaqocha-promo.webp"
+  },
+
+  "contacto": {
+    "whatsapp": "51970993246",
+    "telefono": "+51 970 993 246",
+    "direccion": "Jr. Quinua N° 570, Ayacucho",
+    "horario": "Lun–Dom 9:00 AM – 6:00 PM"
+  }
+}
+
+
+
 ]
