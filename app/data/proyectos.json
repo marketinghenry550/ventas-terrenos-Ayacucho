@@ -1,34 +1,75 @@
 [
   {
-    "slug": "villa-sol-3-qorihuillca",
+    "slug": "villa-sol-2-qorihuillca",
     "tipo": "proyecto",
-    "titulo": "Villa Sol 3",
+    "titulo": "Villa Sol 2",
     "subtitulo": "Qorihuillca",
     "categoria": "Lotes",
     "ubicacion": "Qorihuillca, Huamanga – Ayacucho",
-    "precioDesdeSol": "S/ 26000",
+
+    "precioDesdeSol": "S/ 16,000",
     "precioDesdeDolar": "",
     "pagoContado": "S/ 2,000",
-    "imagen": "/banner.webp",
-    "etiquetas": ["Ayacucho", "Alta plusvalía", "Acceso vehicular", "Servicios en expansión"],
-    "descripcion": "Villa Sol 3 es un proyecto de lotes en Qorihuillca – Ayacucho, ideal para vivienda, casa de campo o inversión. Zona con crecimiento sostenido, accesos en mejora y alta proyección de valorización. Compra segura con respaldo y acompañamiento en todo el proceso.",
-    "equipamiento": ["Título de propiedad", "Servicios completos", "Agua", "Luz", "Accesos vehiculares"],
+
+    "imagen": "/villasol01.webp",
+    "etiquetas": [
+      "Qorihuillca",
+      "Huamanga",
+      "Ayacucho",
+      "Naturaleza",
+      "Zona en crecimiento",
+      "Alta plusvalía",
+      "Acceso vehicular",
+      "Agua",
+      "Luz",
+      "Bioambiental"
+    ],
+
+    "descripcion": "Villa Sol 2 es un proyecto de lotes en Qorihuillca – Huamanga, Ayacucho, pensado para quienes buscan tranquilidad, aire puro y una inversión con alta proyección. Rodeado de naturaleza y con accesos en mejora, es ideal para primera vivienda, casa de campo o inversión. Cuenta con agua, luz y acceso vehicular en una zona con crecimiento sostenido y gran potencial de valorización.",
+
+    "equipamiento": [
+      "Agua",
+      "Luz",
+      "Acceso vehicular",
+      "Entorno bioambiental ",
+      "Zona con proyección de valorización"
+    ],
+
     "caracteristicas": [
       { "label": "Área", "value": "200 m²" },
+      { "label": "Precio", "value": "S/ 16,000" },
       { "label": "Uso", "value": "Vivienda / Casa de campo / Inversión" },
-      { "label": "Documentación", "value": "Acta de transferencia + contrato privado (legalizable)" },
-      { "label": "Valorización", "value": "Zona con alta proyección de crecimiento" }
+      {
+        "label": "Servicios",
+        "value": "Agua, Luz y acceso vehicular"
+      },
+      {
+        "label": "Documentación",
+        "value": "Acta de transferencia + contrato privado (legalizable)"
+      },
+      {
+        "label": "Entorno",
+        "value": "Bioambiental"
+      },
+      {
+        "label": "Valorización",
+        "value": "Zona con alta proyección de crecimiento"
+      }
     ],
+
     "galeria": {
-      "fotos": ["/banner.webp", "/prueba01.png", "/prueba02.webp", "/prueba03.png"],
-      "youtubeId": "uWzgyrh_UTI"
+      "fotos": ["/villasol02.webp", "/villasol03.webp", "/villasol04.webp"],
+      "youtubeId": ""
     },
-    "ubicacionImagen": "/prueba01.png",
-    "mapsUrl": "https://www.google.com/maps?q=Qorihuillca+Huamanga+Ayacucho",
+
+    "ubicacionImagen": "/villasolmap.webp",
+    "mapsUrl": "https://earth.google.com/earth/d/1RbNr9dRhePh8klQifR6gw4m8EIVUQG8Q?usp=sharing",
+
     "descuento": {
-      "titulo": "Campaña activa: separa tu lote hoy y asegura precio preferencial",
+      "titulo": "Campaña activa: separa tu lote hoy y asegura tu precio preferencial",
       "imagen": "/prueba01.webp"
     },
+
     "contacto": {
       "whatsapp": "51970993246",
       "telefono": "+51 970 993 246",

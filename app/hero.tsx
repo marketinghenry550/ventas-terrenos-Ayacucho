@@ -86,7 +86,7 @@ export default function HeroCarousel() {
   return (
     <div className="md:py-20">
 
-    <main className="relative w-full 2xl:h-[90vh] h-[75vh] max-md:h-[28vh] overflow-hidden ">
+    <main className="relative w-full 2xl:h-[90vh] h-[75vh] max-md:h-[32vh] overflow-hidden ">
       <AnimatePresence initial={false} custom={direction}>
         <motion.div
           key={page}

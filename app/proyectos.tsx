@@ -29,7 +29,7 @@ const proyectosData: Proyecto[] = [
     precioDesdeSol: "S/ 1,213",
     precioDesdeDolar: "$ 311",
     imagenSrc: "proyecto.webp",
-    etiqueta: "LOTES",
+    etiqueta: "Proyecto",
     servicios: ["Crédito directo", "PRE VENTA"],
   },
   {
@@ -40,7 +40,7 @@ const proyectosData: Proyecto[] = [
     precioDesdeSol: "S/ 1,131",
     precioDesdeDolar: "$ 290",
     imagenSrc: "proyecto.webp",
-    etiqueta: "LOTES",
+    etiqueta: "Proyecto",
     servicios: ["Crédito directo", "PRE VENTA"],
   },
   {
@@ -51,7 +51,7 @@ const proyectosData: Proyecto[] = [
     precioDesdeSol: "S/ 991",
     precioDesdeDolar: "$ 259",
     imagenSrc: "proyecto.webp",
-    etiqueta: "LOTES",
+    etiqueta: "Proyecto",
     servicios: ["Crédito directo", "PRE VENTA"],
   },
   {
@@ -62,7 +62,7 @@ const proyectosData: Proyecto[] = [
     precioDesdeSol: "S/ 1,931",
     precioDesdeDolar: "$ 495",
     imagenSrc: "proyecto.webp",
-    etiqueta: "LOTES",
+    etiqueta: "Proyecto",
     servicios: ["Crédito directo", "PRE VENTA"],
   },
   {
@@ -73,7 +73,7 @@ const proyectosData: Proyecto[] = [
     precioDesdeSol: "S/ 1,450",
     precioDesdeDolar: "$ 372",
     imagenSrc: "proyecto.webp",
-    etiqueta: "LOTES",
+    etiqueta: "Proyecto",
     servicios: ["Crédito directo", "PRE VENTA"],
   },
   {
@@ -84,7 +84,7 @@ const proyectosData: Proyecto[] = [
     precioDesdeSol: "S/ 1,750",
     precioDesdeDolar: "$ 449",
     imagenSrc: "proyecto.webp",
-    etiqueta: "LOTES",
+    etiqueta: "Proyecto",
     servicios: ["Crédito directo", "PRE VENTA"],
   },
   {
@@ -95,7 +95,7 @@ const proyectosData: Proyecto[] = [
     precioDesdeSol: "S/ 2,100",
     precioDesdeDolar: "$ 538",
     imagenSrc: "proyecto.webp",
-    etiqueta: "LOTES",
+    etiqueta: "Proyecto",
     servicios: ["Crédito directo", "PRE VENTA"],
   },
   {
@@ -106,7 +106,7 @@ const proyectosData: Proyecto[] = [
     precioDesdeSol: "S/ 1,320",
     precioDesdeDolar: "$ 338",
     imagenSrc: "proyecto.webp",
-    etiqueta: "LOTES",
+    etiqueta: "Proyecto",
     servicios: ["Crédito directo", "PRE VENTA"],
   },
   {
@@ -117,7 +117,7 @@ const proyectosData: Proyecto[] = [
     precioDesdeSol: "S/ 1,680",
     precioDesdeDolar: "$ 431",
     imagenSrc: "proyecto.webp",
-    etiqueta: "LOTES",
+    etiqueta: "Proyecto",
     servicios: ["Crédito directo", "PRE VENTA"],
   },
 ];

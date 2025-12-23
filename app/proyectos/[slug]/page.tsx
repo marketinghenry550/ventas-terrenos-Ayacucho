@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import Image from "next/image";
 import { MapPin, Clock } from "lucide-react";
 
-import proyectosData from "@/app/data/proyectos.json"; // ✅ CAMBIO CLAVE (antes era propiedades.json)
+import proyectosData from "@/app/data/proyectos.json";
 
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
@@ -13,7 +13,6 @@ import Footer from "@/app/footer";
 import SectionAnimation from "@/app/propiedades/section-animation";
 import EquipamientoGrid from "@/app/propiedades/equipamiento-grid";
 import GaleriaTabs from "@/app/propiedades/galeria-tabs";
-import DescuentoBanner from "@/app/propiedades/descuento-banner";
 import StickyContactoCardCentenario from "@/app/propiedades/sticky-contacto-card";
 
 type KV = { label: string; value: string };
@@ -62,7 +61,6 @@ type Proyecto = {
   };
 };
 
-// ✅ DATA CORRECTA
 const data = proyectosData as unknown as Proyecto[];
 
 function softReq(ok: boolean, msg: string) {
@@ -71,21 +69,20 @@ function softReq(ok: boolean, msg: string) {
 
 function onlyNumber(v: string) {
   return String(v ?? "")
-    .replace(/s\/|S\/|\s/gi, "")
+    .replace(/s\/|S\/|\s|,/gi, "") // ✅ también quita comas
     .trim();
 }
 
-export default function ProyectoPage({
+export default async function ProyectoPage({
   params,
 }: {
-  params: { slug: string }; // ✅ CAMBIO: params NO es Promise
+  params: Promise<{ slug: string }>; // ✅ CAMBIO CLAVE: params es Promise en tu Next
 }) {
-  const { slug } = params;
+  const { slug } = await params; // ✅ CAMBIO CLAVE: await params
 
   const proyecto = data.find((p) => p.slug === slug);
   if (!proyecto) notFound();
 
-  // ✅ Validaciones básicas
   softReq(!!proyecto.imagen, `Falta imagen (hero) en JSON: ${proyecto.slug}`);
   softReq(!!proyecto.ubicacion, `Falta ubicacion en JSON: ${proyecto.slug}`);
   softReq(!!proyecto.precioDesdeSol, `Falta precioDesdeSol en JSON: ${proyecto.slug}`);
@@ -110,7 +107,7 @@ export default function ProyectoPage({
       <main className="min-h-screen bg-white pt-20 lg:pt-[140px]">
         {/* HERO */}
         <section className="relative">
-          <div className="relative h-80 w-full md:h-[400px] lg:h-[555px]">
+          <div className="relative h-80 w-full md:h-[400px] lg:h-[600px]">
             <Image
               src={proyecto.imagen}
               alt={`${proyecto.titulo} ${proyecto.subtitulo ?? ""}`.trim()}
@@ -250,9 +247,7 @@ export default function ProyectoPage({
                             {p.titulo}
                           </p>
                           {p.detalle ? (
-                            <p className="mt-1 text-sm text-slate-600">
-                              {p.detalle}
-                            </p>
+                            <p className="mt-1 text-sm text-slate-600">{p.detalle}</p>
                           ) : null}
                         </Card>
                       ))}
@@ -294,46 +289,44 @@ export default function ProyectoPage({
                     Galería de Fotos y Videos
                   </h2>
                   <div className="mt-6">
-                    <GaleriaTabs
-                      fotos={fotos}
-                      youtubeId={youtubeId}
-                      titulo={proyecto.titulo}
-                    />
+                    <GaleriaTabs fotos={fotos} youtubeId={youtubeId} titulo={proyecto.titulo} />
                   </div>
                 </div>
               </SectionAnimation>
-
-              {proyecto.descuento?.imagen ? (
-                <SectionAnimation>
-                  <div className="pt-10">
-                    <DescuentoBanner
-                      titulo={proyecto.descuento.titulo}
-                      imagen={proyecto.descuento.imagen}
-                    />
-                  </div>
-                </SectionAnimation>
-              ) : null}
 
               <SectionAnimation>
                 <div className="pt-10">
                   <h2 className="text-3xl font-extrabold text-[#0B6FB6]">
                     Ubicación
                   </h2>
+
                   <div className="mt-6 overflow-hidden rounded-3xl border border-slate-200 bg-[#F3F7FB] shadow-[0_16px_45px_rgba(2,6,23,0.06)]">
-                    <div className="relative aspect-16/8 w-full">
-                      <Image
-                        src={proyecto.ubicacionImagen ?? proyecto.imagen}
-                        alt={`Mapa - ${proyecto.titulo}`}
-                        fill
-                        className="object-cover"
-                        sizes="100vw"
-                      />
-                    </div>
+                    {/* CLICK => GOOGLE EARTH */}
+                    <a
+                      href={proyecto.mapsUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block"
+                      aria-label="Ver ubicación en Google Earth"
+                      title="Abrir en Google Earth"
+                    >
+                      <div className="relative aspect-16/8 w-full">
+                        <Image
+                          src={proyecto.ubicacionImagen ?? proyecto.imagen}
+                          alt={`Google Earth - ${proyecto.titulo}`}
+                          fill
+                          className="object-cover cursor-pointer hover:opacity-95 transition"
+                          sizes="100vw"
+                        />
+                      </div>
+                    </a>
+
                     <div className="px-6 py-5 text-sm text-slate-800">
                       <div className="flex items-center gap-2">
                         <MapPin className="h-4 w-4 text-[#0B6FB6]" />
-                        <span className="font-extrabold">
-                          {proyecto.ubicacion}
+                        <span className="font-extrabold">{proyecto.ubicacion}</span>
+                        <span className="ml-auto text-xs font-bold text-[#0B6FB6] underline">
+                          Ver en Google Earth
                         </span>
                       </div>
                     </div>
@@ -364,4 +357,3 @@ export default function ProyectoPage({
 export function generateStaticParams() {
   return data.map((p) => ({ slug: p.slug }));
 }
-      
