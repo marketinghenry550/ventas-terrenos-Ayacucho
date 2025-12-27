@@ -609,12 +609,7 @@ const InmueblesPage = () => {
                       </p>
                     </div>
 
-                    <Link
-                      href="/propiedades"
-                      className="text-sm font-semibold text-[#005BBB] hover:underline"
-                    >
-                      Ver todas
-                    </Link>
+                  
                   </div>
 
                   <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
