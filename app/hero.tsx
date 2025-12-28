@@ -1,9 +1,9 @@
 "use client";
 
-import { AnimatePresence, motion, Variants, Transition } from "framer-motion";
-import Link from "next/link";
-import {  useEffect, useState, useCallback } from "react";
+import { AnimatePresence, motion, Transition, Variants } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
+import { useCallback, useEffect, useState } from "react";
 
 // --- DATOS DE LOS SLIDES ---
 const slidesData: { 

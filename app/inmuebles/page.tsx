@@ -1,17 +1,17 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
-import React, { useMemo, useState, FC, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { FaMapMarkerAlt, FaBed, FaBath, FaRulerCombined } from "react-icons/fa";
+import { FC, useEffect, useMemo, useState } from "react";
+import { FaBath, FaBed, FaMapMarkerAlt, FaRulerCombined } from "react-icons/fa";
 
-import proyectosData from "@/app/data/proyectos.json";
-import propiedadesData from "@/app/data/propiedades.json";
 import alquileresData from "@/app/data/alquileres.json";
+import propiedadesData from "@/app/data/propiedades.json";
+import proyectosData from "@/app/data/proyectos.json";
 
-import Navbar from "../navbar";
 import Footer from "../footer";
+import Navbar from "../navbar";
 import HeroInmuebles from "./HeroInmuebles";
 
 // --- TIPOS ---
@@ -23,7 +23,7 @@ type TipoInmueble =
   | "departamento"
   | "oficina"
   | "local"
-  | "otro";
+  | "otros";
 
 interface ItemBase {
   slug: string;
