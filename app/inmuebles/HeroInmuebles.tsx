@@ -45,7 +45,7 @@ const HeroInmuebles: React.FC<HeroProps> = ({
         {/* IMAGEN DE FONDO */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/proyecto.webp"
+            src="/Pampaqocha04.webp"
             alt="Fondo de proyectos en Ayacucho"
             fill
             className="object-cover opacity-60"
