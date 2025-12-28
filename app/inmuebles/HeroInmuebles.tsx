@@ -1,8 +1,8 @@
 "use client";
 
-import React, { useMemo } from "react";
 import Image from "next/image";
-import { FaSearch, FaCheck } from "react-icons/fa";
+import React, { useMemo } from "react";
+import { FaCheck, FaSearch } from "react-icons/fa";
 
 // ✅ Ajustado a tus proyectos reales (Ayacucho/Huamanga – Qorihuillca + sectores)
 const LUGARES = [
@@ -64,7 +64,7 @@ const HeroInmuebles: React.FC<HeroProps> = ({
 
           <p className="mb-5 text-sm font-medium text-white/90 sm:text-lg">
             Proyectos en Huamanga: Qorihuillca y sectores con alta proyección,
-            naturaleza y acceso vehicular.
+            naturaleza y acceso vehicular
           </p>
 
           {/* PILLS DE LUGARES */}
