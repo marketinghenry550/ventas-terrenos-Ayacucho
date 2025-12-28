@@ -23,7 +23,7 @@ type TipoInmueble =
   | "departamento"
   | "oficina"
   | "local"
-  | "otros";
+  | "otro";
 
 interface ItemBase {
   slug: string;
