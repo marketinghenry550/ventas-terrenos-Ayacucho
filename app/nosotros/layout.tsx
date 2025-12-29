@@ -69,7 +69,7 @@ export default function NosotrosLayout({
   return (
     <>
       {children}
-      <GoogleAnalytics gaId="G-HSYFNDRHDW" />
+      <GoogleAnalytics gaId="G-7TJCWC5JMR" />
       
       {/* Schema Markup - AboutPage */}
       <script

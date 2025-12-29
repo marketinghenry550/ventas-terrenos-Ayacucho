@@ -252,7 +252,7 @@ export const metadata: Metadata = {
 
   // Completa después de verificar en Google Search Console
   verification: {
-    google: "G-HSYFNDRHDW",
+    google: "G-7TJCWC5JMR",
     // Obtén en: https://search.google.com/search-console
   },
 
@@ -369,7 +369,7 @@ export default function RootLayout({
       <body className={`${font.className} antialiased`}>
         {children}
         <FloatingButtons />
-        <GoogleAnalytics gaId="G-HSYFNDRHDW" />
+        <GoogleAnalytics gaId="G-7TJCWC5JMR" />
       </body>
     </html>
   );
