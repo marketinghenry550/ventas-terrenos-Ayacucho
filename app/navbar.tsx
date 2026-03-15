@@ -9,29 +9,28 @@ import {
   Variants,
 } from "framer-motion";
 
+import { IconType } from "react-icons";
 import {
-  LuMenu,
-  LuX,
+  LuArrowRight,
   LuChevronRight,
   LuMapPin,
+  LuMenu,
   LuPlus,
-  LuArrowRight,
+  LuX,
 } from "react-icons/lu";
-import { IconType } from "react-icons";
 
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
+import { Button } from "@/components/ui/button";
 import {
   FaFacebook,
   FaInstagram,
   FaLinkedin,
-  FaTiktok,
-  FaYoutube,
+  FaTiktok
 } from "react-icons/fa";
-import { Button } from "@/components/ui/button";
 
 // -----------------------------
 // TIPOS
@@ -70,9 +69,11 @@ type ProyectoDestacado = {
 // LINKS TOP NAV
 // -----------------------------
 const navLinks: NavLink[] = [
-  { href: "/inmuebles#proyectos", label: "Proyectos" },
-  { href: "/inmuebles#propiedades", label: "Propiedades" },
-  { href: "/nosotros", label: "Nosotros" },
+  { href: "https://www.casagrande-inmobiliaria.com/inmuebles#propiedades", label: "Proyectos" },
+  { href: "https://www.casagrande-inmobiliaria.com/inmuebles#proyectos", label: "Lotes" },
+  { href: "https://www.casagrande-inmobiliaria.com/inmuebles#casas", label: "Propiedades" },
+  { href: "https://www.casagrande-inmobiliaria.com/venta-terreno", label: "Vende tu terreno" },
+  { href: "https://www.casagrande-inmobiliaria.com/nosotros", label: "Nosotros" },
 ];
 
 // -----------------------------
@@ -80,111 +81,93 @@ const navLinks: NavLink[] = [
 // -----------------------------
 const socialLinks: SocialLink[] = [
   {
-    href: "https://www.facebook.com/profile.php?id=100077864046528&locale=es_LA",
+    href: "https://www.facebook.com/Casagrande.Bienes.R",
     label: "Facebook",
     Icon: FaFacebook,
   },
   {
-    href: "https://www.linkedin.com/in/david-guerra-4a9b44385/",
+    href: "https://www.linkedin.com/company/casagrande-bienes-y-raices/about/",
     label: "LinkedIn",
     Icon: FaLinkedin,
   },
+  // {
+  //   href: "https://www.youtube.com/channel/UCIuOx9lfSBKoJ5QsRlQjA7Q",
+  //   label: "YouTube",
+  //   Icon: FaYoutube,
+  // },
   {
-    href: "https://www.youtube.com/channel/UCIuOx9lfSBKoJ5QsRlQjA7Q",
-    label: "YouTube",
-    Icon: FaYoutube,
-  },
-  {
-    href: "https://www.instagram.com/casagrandegeotecnia/",
+    href: "https://www.instagram.com/casagrandeinmobilaria/",
     label: "Instagram",
     Icon: FaInstagram,
   },
   {
-    href: "https://www.tiktok.com/@casagrandegeotecnia?lang=es-419",
+    href: "https://www.tiktok.com/@casagrandeinmb.24",
     label: "TikTok",
     Icon: FaTiktok,
   },
 ];
 
 const contactInfo: ContactInfoItemProps[] = [
-  { text: "Ubicacion", href: "#" },
-  { text: "Llámanos: +51 945 513 323", href: "tel:+51916194372" },
+  { text: "Ubicacion", href: "https://maps.app.goo.gl/oNfCpynqor7ykd756" },
+  { text: "Llámanos:  916 194 372", href: "https://api.whatsapp.com/send/?phone=51916194372&text=Hola%2C+quiero+una+cotizaci%C3%B3n&type=phone_number&app_absent=0" },
 ];
 
 // -----------------------------
 // LISTA DE CIUDADES (LEFT COLUMN)
 // -----------------------------
 const ciudadesProyectos = [
-  "Villa Sol 2",
-  "Pampaqocha",
-  "Cañete",
-  "Carabayllo",
-  "Chilca",
-  "Pisco",
-  "Ica",
-  "Lima Este",
-  "Lima Sur",
+  "MACHAYHUYCCO",
+  "BUNGAVILIA",
+  "HUANUPATA",
+  "CAÑONES",
+  
 ];
 
-// -----------------------------
-// PROYECTOS DESTACADOS (RIGHT COLUMN)
-// ✅ IMPORTANTE: cada item trae su href listo
-// -----------------------------
+
 const proyectosDestacados: ProyectoDestacado[] = [
   {
     id: 1,
-    tipo: "LOTES",
-    ciudad: "Villa Sol 2",
-    nombre: "Villa Sol 2",
+    tipo: "PROYECTO",
+    ciudad: "MACHAYHUYCCO",
+    nombre: "CAMPO REAL",
     descripcion: "Naturaleza, aire puro y alta plusvalía en Qorihuillca.",
+    precioDesde: "S/ 20,000",
+    badgeColor: "bg-[#FFB200]",
+    imagen: "/MACHAYHUAYCCO/MACHAYHUAYCCO03.webp",
+    href: "https://www.casagrande-inmobiliaria.com/propiedades/machayhuycco-ayacucho",
+  },
+   {
+    id: 2,
+    tipo: "PROYECTO",
+    ciudad: "BUNGAVILIA",
+    nombre: "BUNGAVILIA",
+    descripcion: "Naturaleza, con servicios basicos y alta plusvalía en Qorihuillca.",
+    precioDesde: "S/ 18,000",
+    badgeColor: "bg-[#FFB200]",
+    imagen: "/BUNGAVILIA/BUGAMBILIAS01.webp",
+    href: "https://www.casagrande-inmobiliaria.com/propiedades/bungavilia-ayacucho",
+  },
+   {
+    id: 3,
+    tipo: "PROYECTO",
+    ciudad: "HUANUPATA",
+    nombre: "HUANUPATA",
+    descripcion: "Naturaleza, con servicios basicos y alta plusvalía en Qorihuillca.",
     precioDesde: "S/ 16,000",
     badgeColor: "bg-[#FFB200]",
-    imagen: "/villasol01.webp",
-    href: "/proyectos/villa-sol-2-qorihuillca",
+    imagen: "/HUANUPATA/HUANUPATA01.webp",
+    href: "https://www.casagrande-inmobiliaria.com/propiedades/huanupata",
   },
-  {
-    id: 2,
-    tipo: "LOTES",
-    ciudad: "Pampaqocha",
-    nombre: "Pampaqocha",
-    descripcion: "Proyecto consolidado en el km 61.5.",
-    precioDesde: "S/ 31,900",
-    badgeColor: "bg-[#00C389]",
-    imagen: "/Pampaqocha01.webp",
-    href: "/proyectos/pampaqocha-qorihuillca-170m2",
-  },
-  {
-    id: 3,
-    tipo: "CASAS",
-    ciudad: "Asia",
-    nombre: "Club Residencial Asia",
-    descripcion: "Casas de campo cerca al boulevard.",
-    precioDesde: "S/ 189,900",
-    badgeColor: "bg-[#FF4B4B]",
-    imagen: "/inmuebles/asia-casas.webp",
-    href: "/propiedades/club-residencial-asia",
-  },
-  {
+   {
     id: 4,
     tipo: "LOTES",
-    ciudad: "Chilca",
-    nombre: "Vista Verde Chilca",
-    descripcion: "Lotes ecológicos.",
-    precioDesde: "S/ 28,000",
-    badgeColor: "bg-[#01338C]",
-    imagen: "/inmuebles/chilca-2.webp",
-    href: "/proyectos/vista-verde-chilca",
-  },
-  {
-    id: 5,
-    tipo: "LOTES",
-    ciudad: "Pisco",
-    nombre: "Vista Verde Pisco",
-    descripcion: "Lotes ecológicos cerca al mar.",
-    precioDesde: "S/ 28,000",
-    badgeColor: "bg-[#01338C]",
-    imagen: "/inmuebles/chilca-2.webp",
-    href: "/proyectos/vista-verde-pisco",
+    ciudad: "CAÑONES",
+    nombre: "CAÑONES",
+    descripcion: "Naturaleza, con servicios basicos y alta plusvalía en Qorihuillca.",
+    precioDesde: "S/ 30,000",
+    badgeColor: "bg-[#FFB200]",
+    imagen: "/CAÑONES/CAÑONES01.webp",
+    href: "https://www.casagrande-inmobiliaria.com/proyectos/ca%C3%B1ones-ayacucho-qorihuillca",
   },
 ];
 
@@ -236,7 +219,7 @@ const TopBar = () => (
 // MEGA MENU
 // -----------------------------
 const ProyectosMegaMenu = ({ onClose }: { onClose?: () => void }) => {
-  const [activeCity, setActiveCity] = useState("Villa Sol 2");
+  const [activeCity, setActiveCity] = useState("MACHAYHUYCCO");
 
   const filteredProjects = proyectosDestacados.filter(
     (p) => p.ciudad === activeCity
@@ -481,7 +464,7 @@ const DesktopMenu = ({
 
     <div className="hidden items-center space-x-4 md:flex lg:flex">
       <a
-        href="https://wa.me/51945513323?text=Hola,%20quiero%20una%20cotización"
+        href="https://wa.me/51916194372?text=Hola,%20quiero%20una%20cotización"
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -678,7 +661,7 @@ const Navbar = () => {
                   alt="Logo de Casagrande Geotecnia"
                   width={100}
                   height={48}
-                  className="h-11 w-auto max-md:px-2 md:h-17"
+                  className="h-11 w-auto max-md:px-2 md:h-13"
                 />
               </motion.div>
             </Link>

@@ -1,10 +1,10 @@
-import Blog from "./blog";
 import Casas from "./casas";
 import Comentario from "./comemtario";
 import Footer from "./footer";
-import Formulario from "./formulario";
+import Gana from "./gana";
 import HeroCarousel from "./hero";
 import Navbar from "./navbar";
+import Proceso from "./proceso";
 import Proyectos from "./proyectos";
 
 export default function Home() {
@@ -12,12 +12,13 @@ export default function Home() {
     <div>
       <Navbar />
       <HeroCarousel />
-      {/* <Proceso /> */}
+      <Proceso />
       <Proyectos />
-      <Casas />
+       <Casas /> 
       <Comentario />
-s      <Formulario />
-      <Blog />
+      <Gana />
+      {/* <Formulario /> */}
+      {/* <Blog /> */}
       <Footer />
     </div>
   );

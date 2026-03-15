@@ -3,7 +3,7 @@ import { Separator } from "@/components/ui/separator";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { FaChevronUp, FaInstagram, FaLinkedin, FaTiktok, FaYoutube } from "react-icons/fa";
+import { FaChevronUp, FaInstagram, FaLinkedin, FaTiktok } from "react-icons/fa";
 
 import { SiFacebook } from "react-icons/si";
 
@@ -15,17 +15,14 @@ const Footer = () => {
     {
       title: "Soporte al cliente",
       links: [
-        { name: "(+51) 945 513 323", href: "https://api.whatsapp.com/send?phone=51916194372&text=Hola!%20Estoy%20interesado%20en%20el%20pryecto." },
+        { name: "916 194 372", href: "https://api.whatsapp.com/send/?phone=51916194372&text=Hola%2C+quiero+una+cotizaci%C3%B3n&type=phone_number&app_absent=0" },
         {
-          name: "comercial@casagrandegeotecnia.com.pe",
-          href: "https://mail.google.com/mail/?view=cm&to=u19217724@gmail.com",
-        },
-        {
-          name: "Jirón Quinua 565, Ayacucho 05003", href: "https://maps.app.goo.gl/VQrFK4dVjmDKWY5M7",
+          name: "casagrandeinmb.24@gmail.com ",
+          href: "https://mail.google.com/mail/?view=cm&to=casagrandeinmb.24@gmail.com",
         },
         {
           name: "Redes sociales",
-          href: "https://www.facebook.com/profile.php?id=61584966996472",
+          href: "https://www.google.com/search?q=Casagrande+Bienes+y+Ra%C3%ADces&sxsrf=ANbL-n5-xFpq8Wkw1ovVdd1Kh3z8Nq28jw%3A1768803364267",
         },
       ],
     },
@@ -33,10 +30,9 @@ const Footer = () => {
 
   // Data for "Nuestros productos" section links
   const productLinks = [
-    { name: "Nosotros", href: "#" },
-    { name: "Proyectos", href: "#" },
-    { name: "Lotes", href: "/blog" },
-    { name: "Vende tu terreno ", href: "#" },
+    { name: "Nosotros", href: "/nosotros" },
+    { name: "Vende tu terreno", href: "/venta-terreno" },
+    { name: "Gana dinero", href: "#" },
   ];
 
   // Data for social media links
@@ -44,28 +40,28 @@ const Footer = () => {
     {
       icon: SiFacebook,
       name: "Facebook",
-      href: "https://www.facebook.com/profile.php?id=100077864046528&locale=es_LA",
+      href: "https://www.facebook.com/Casagrande.Bienes.R",
     },
     {
       icon: FaInstagram ,
       name: "Instagram",
-      href: "https://www.instagram.com/casagrandegeotecnia/",
+      href: "https://www.instagram.com/casagrandeinmobilaria/",
     },
     {
       icon: FaTiktok ,
       name: "TikTok",
-      href: "https://www.tiktok.com/@casagrandegeotecnia?lang=es-419",
+      href: "https://www.tiktok.com/@casagrandeinmb.24",
     },
     {
       icon: FaLinkedin ,
       name: "LinkedIn",
-      href: "https://www.linkedin.com/in/david-guerra-4a9b44385/",
+      href: "https://www.linkedin.com/company/casagrande-bienes-y-raices/about/",
     },
-    {
-      icon: FaYoutube ,
-      name: "YouTube",
-      href: "https://www.youtube.com/channel/UCIuOx9lfSBKoJ5QsRlQjA7Q",
-    },
+    // {
+    //   icon: FaYoutube ,
+    //   name: "YouTube",
+    //   href: "https://www.youtube.com/channel/UCIuOx9lfSBKoJ5QsRlQjA7Q",
+    // },
   ];
 
   // Function to scroll to top
@@ -90,7 +86,7 @@ const Footer = () => {
             >
               <Image
                 src="/logofooter.svg"
-                alt="Logo de casagrande geotecnia"
+                alt="Logo de casagrande inmobiliaria"
                 fill
                 sizes="(max-width: 768px) 192px, (max-width: 1200px) 256px, 384px"
                 className="object-contain object-left transition-transform group-hover:scale-105"
@@ -123,7 +119,7 @@ const Footer = () => {
               >
                 <Image
                   src="/logofooter.svg"
-                  alt="logo de venta de terrenos en ayacucho"
+                  alt="logo de casagrande inmobiliaria"
                   fill
                   sizes="100vw"
                   className="object-contain px-2 transition-transform group-hover:scale-105"
@@ -216,8 +212,7 @@ const Footer = () => {
           {/* About description and Social Media (Desktop Only) */}
           <div className="hidden md:flex flex-col items-start py-2">
             <p className="text-white mb-4 sm:mb-6 text-sm leading-relaxed">
-              Más de 20 años asegurando estabilidad y eficiencia en proyectos de
-              ingeniería
+              Más de 5 años ayudando a convertir el sueño de la casa propia en un plan posible y seguro
             </p>
           </div>
         </div>
@@ -241,7 +236,7 @@ const Footer = () => {
         {/* Copyright and Legal Links */}
         <div className="flex flex-col md:flex-row justify-between items-center pt-2 sm:pt-4">
           <div className="text-white text-xs sm:text-sm mb-3 md:mb-0 text-center md:text-left leading-relaxed">
-            © {new Date().getFullYear()} Casagrande Geotecnia. Todos los
+            © {new Date().getFullYear()} Casagrande Bienes y raices. Todos los
             derechos reservados.
           </div>
           <nav className="flex flex-wrap justify-center gap-x-3 sm:gap-x-4 gap-y-1 sm:gap-y-2 items-center">

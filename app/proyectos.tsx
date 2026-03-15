@@ -1,9 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 
-import React, { FC, useRef } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { FC, useRef } from "react";
 
 interface Proyecto {
   id: number;
@@ -22,70 +22,58 @@ interface Proyecto {
 const proyectosData: Proyecto[] = [
   {
     id: 1,
-    nombre: "Villa Sol 2",
-    subtitulo: "Qorihuillca",
-    ubicacion: "Huamanga – Ayacucho",
-    precioDesdeSol: "S/ 16,000",
+    nombre: "CAMPO REAL",
+    subtitulo: "Ccorihuillca",
+    ubicacion: "Huamanga – Qorihuillca",
+    precioDesdeSol: "S/ 18,000",
     precioDesdeDolar: "",
-    imagenSrc: "villasol01.webp",
+    imagenSrc: "/MACHAYHUAYCCO/MACHAYHUAYCCO03.webp",
     etiqueta: "Proyecto",
     metrosLote: "200 m²",
     servicios: ["Agua", "Luz", "Acceso vehicular", "Entorno bioambiental"],
-    link: "/proyectos/villa-sol-2-qorihuillca",
+    link: "https://www.casagrande-inmobiliaria.com/propiedades/machayhuycco-ayacucho",
   },
   {
     id: 2,
-    nombre: "Pampaqocha",
-    subtitulo: "Qorihuillca",
-    ubicacion: "Huamanga – Ayacucho",
-    precioDesdeSol: "S/ 45,000",
+    nombre: "BUGAMBILIAS ",
+    subtitulo: "Ccorihuillca ",
+    ubicacion: "Huamanga – Qorihuillca",
+    precioDesdeSol: "S/ 18,000",
     precioDesdeDolar: "",
-    imagenSrc: "Pampaqocha01.webp",
-    etiqueta: "Proyecto",
-    metrosLote: "170 m²",
-    servicios: ["Agua", "Luz", "Acceso vehicular", "Entorno bioambiental"],
-    link: "/proyectos/pampaqocha-qorihuillca-170m2",
-  },
-  {
-    id: 3,
-    nombre: "Pampaqocha",
-    subtitulo: "Qorihuillca",
-    ubicacion: "Huamanga – Ayacucho",
-    precioDesdeSol: "S/ 68,000",
-    precioDesdeDolar: "",
-    imagenSrc: "Pampaqochasegundo03.webp",
-    etiqueta: "Proyecto",
-    metrosLote: "300 m²",
-    servicios: ["Agua", "Luz", "Acceso vehicular", "Entorno bioambiental"],
-    link: "/proyectos/pampaqocha-qorihuillca-300m2",
-  },
-  {
-    id: 4,
-    nombre: "Ccasera Qorihuillca",
-    subtitulo: "Qorihuillca",
-    ubicacion: "Huamanga – Ayacucho",
-    precioDesdeSol: "S/ 33,000",
-    precioDesdeDolar: "",
-    imagenSrc: "Ccasera04.webp",
+    imagenSrc: "/BUNGAVILIA/BUGAMBILIAS01.webp",
     etiqueta: "Proyecto",
     metrosLote: "200 m²",
     servicios: ["Agua", "Luz", "Acceso vehicular", "Entorno bioambiental"],
-    link: "/proyectos/casera-qorihuillca-200m2",
+    link: "https://www.casagrande-inmobiliaria.com/propiedades/bungavilia-ayacucho",
   },
   {
-    id: 5,
-    nombre: "Ccahuiñayoq",
-    subtitulo: "Qorihuillca",
-    ubicacion: "Huamanga, Ayacucho",
-    precioDesdeSol: "S/ 30,000",
+    id: 3,
+    nombre: "HUANUPATA",
+    subtitulo: "Ccorihuillca ",
+    ubicacion: "Huamanga – Qorihuillca",
+    precioDesdeSol: "S/ 16,000",
     precioDesdeDolar: "",
-    imagenSrc: "Ccahuiñayoq04.webp",
+    imagenSrc: "/HUANUPATA/HUANUPATA01.webp",
     etiqueta: "Proyecto",
-    metrosLote: "1,200 m²",
+    metrosLote: "200 m²",
     servicios: ["Agua", "Luz", "Acceso vehicular", "Entorno bioambiental"],
-    link: "/proyectos/ccahuinnayoq-qorihuillca-1200m2",
+    link: "https://www.casagrande-inmobiliaria.com/propiedades/huanupata",
+  },
+  {
+    id: 4,
+    nombre: "Corihuillca",
+    subtitulo: "Ayacucho ",
+    ubicacion: "Huamanga – Qorihuillca",
+    precioDesdeSol: "S/ 47,000",
+    precioDesdeDolar: "",
+    imagenSrc: "/PAMPAHOCHA/PAMPAHOCHA04.webp",
+    etiqueta: "Proyecto",
+    metrosLote: "200 m²",
+    servicios: ["Agua", "Luz", "Acceso vehicular", "Entorno bioambiental"],
+    link: "https://www.casagrande-inmobiliaria.com/proyectos/lotes-pampahocha-ayacucho",
   },
 ];
+
 
 const SvgIcon: FC<{ path: string; className?: string }> = ({ path, className }) => (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className={className ?? "w-4 h-4 shrink-0"}>
@@ -195,7 +183,7 @@ const Proyectos = () => {
       <div className="2xl:max-w-[1650px] max-w-[1550px] mx-auto px-4 sm:px-6">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-6">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#005BBB] border-l-4 border-[#FFD100] pl-4">
-            Nuestras recomendaciones para ti
+            Nuestros Proyectos para ti
           </h2>
 
           <Link
@@ -223,7 +211,7 @@ const Proyectos = () => {
             style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
           >
             {proyectosData.map((p) => (
-              <div key={p.id} className="snap-start flex-shrink-0 w-[88%] sm:w-[52%] lg:w-[32%] xl:w-[24%]">
+              <div key={p.id} className="snap-start shrink-0 w-[88%] sm:w-[52%] lg:w-[32%] xl:w-[24%]">
                 <ProjectCard p={p} />
               </div>
             ))}
